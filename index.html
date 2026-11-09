@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UTAU Random Pitch Generator v1.12</title>
+  <title>UTAU Random Pitch Generator v1.14</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,6 +22,9 @@
       </div>
     </header>
 
+    <!-- v1.14: Two-column workspace on desktop; controls stay on the left. -->
+    <div class="workspace">
+      <div class="controls-column">
     <section class="group">
       <div class="group-title" id="genderTitle">Gender</div>
       <div class="options">
@@ -80,7 +83,18 @@
 
     <div class="message" id="message"></div>
 
-    <footer>v1.12: 2–4 Pitches / Gender Range / Avoid Sharps / Folder Numbering<br>UTAU Random Pitch Generator · by itsukiMNE</footer>
+    </div>
+    <!-- v1.14: Move the existing history into the desktop right column. -->
+    <section class="history" aria-label="Pitch history">
+      <div class="history-header">
+        <div class="group-title" id="historyTitle">历史记录（最近 20 条）</div>
+        <button class="history-clear" id="clearHistoryButton" type="button">清空</button>
+      </div>
+      <div class="history-list" id="historyList"></div>
+    </section>
+    </div>
+
+    <footer>v1.14: 2–4 Pitches / Gender Range / Avoid Sharps / Folder Numbering / History<br>UTAU Random Pitch Generator · by itsukiMNE</footer>
   </main>
   <script src="script.js"></script>
 </body>
