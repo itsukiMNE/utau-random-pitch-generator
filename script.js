@@ -19,7 +19,7 @@
         historyEmpty: "No history yet",
         historyRestore: "Restore",
         historyDelete: "Delete",
-        versionText: "v1.14: 2–4 Pitches / Gender Range / Avoid Sharps / Folder Numbering / History"
+        versionText: "v1.15: 2–4 Pitches / Gender Range / Avoid Sharps / Folder Numbering / History"
       },
       ja: {
         subtitle: "多音階UTAU音源向けのランダム音階提案ツール",
@@ -40,7 +40,7 @@
         historyEmpty: "履歴はまだありません",
         historyRestore: "復元",
         historyDelete: "削除",
-        versionText: "v1.14: 2～4音階 / 性別別音域 / ♯回避 / フォルダ番号 / 履歴"
+        versionText: "v1.15: 2～4音階 / 性別別音域 / ♯回避 / フォルダ番号 / 履歴"
       },
       zh: {
         subtitle: "为多音阶UTAU音源提供随机音阶建议",
@@ -61,7 +61,7 @@
         historyEmpty: "暂无历史记录",
         historyRestore: "恢复",
         historyDelete: "删除",
-        versionText: "v1.14: 2～4音阶 / 男女声音域 / 规避升号 / 文件夹编号 / 历史记录"
+        versionText: "v1.15: 2～4音阶 / 男女声音域 / 规避升号 / 文件夹编号 / 历史记录"
       }
     };
 
@@ -112,9 +112,9 @@ let generatedPitches = [];
       const r = Math.random();
 
       if (gender === "female") {
-        // v1.14: female base range lowered by one semitone.
-        // 67% F#3 (54), 33% G3 (55).
-        baseNote = r < 0.67 ? 54 : 55;
+        // v1.15: Match the v1.03 EXE female base-note probabilities.
+        // 60% G3 (55), 20% G#3 (56), 20% F#3 (54).
+        baseNote = r < 0.60 ? 55 : (r < 0.80 ? 56 : 54);
       } else {
         // 67% A2 (45), 33% G#2 (44).
         baseNote = r < 0.67 ? 45 : 44;

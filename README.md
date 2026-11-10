@@ -28,4 +28,4 @@ A simple browser-based tool for generating random pitch combinations for multi-p
 
 ## Version
 
-**v1.14** — Display generation controls and history side by side on desktop.
+**v1.15** — Match female starting-pitch probabilities to the v1.03 EXE.
